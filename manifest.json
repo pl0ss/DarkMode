@@ -1,0 +1,19 @@
+{
+    "name": "DarkMode",
+    "version": "0.1.1",
+    "manifest_version": 3,
+	"description" : "Press ° (Shift + ^) to toggle DarkMode! Made by Kev 02.01.2022",
+	"icons": { "128": "icons/128x.png" },
+	"action": {
+		"default_icon": {"128": "icons/128x.png"},
+		"default_title": "DarkMode",
+		"default_popup": "browseraction.html"
+	},
+	"content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["darkmode.js"]
+    }],
+	"permissions": [
+		"webNavigation"
+	]
+}
